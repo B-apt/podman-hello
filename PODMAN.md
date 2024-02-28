@@ -169,13 +169,23 @@ spec:
       hostPort: 18400
 ```
 
+## Podman & Kind
+
+<img alt="kind-logo.png" height="70" src="kind-logo.png"/>
+
+[Kind](https://kind.sigs.k8s.io/) est un outil à la base pensé pour faire du développement Kubernetes. Il est aussi
+utiliser pour exécuter en local un cluster à des fins de tests, d'apprentissage, de découverte ou autre.
+Podman met à disposition une extension qui permet d'interragir avec Kind et de gérer la création d'un cluster
+Kubernetes directement sur le pc du développeur.
+
+
 ## Conclusion
 
 La principale différence entre des conteneurs exécutés par le daemon Docker ou par Podman se
 trouve dans le fait que via Podman (en mode rootless) les conteneurs n'ont pas d'IP. Mais en règle
 générale (et surtout en utilisant les POD) c'est plus un changement d'habitude qu'un point bloquant.
 
-En dehors de ce point, on trouve avec un Podman un outil moderne, flexible et très puissant pour
+En dehors de ce point, on trouve avec **Podman** un outil moderne, flexible et très puissant pour
 travailler avec ses conteneurs. De nombreux développeurs seront séduits par les capacités de Podman,
 et dans mon cas il va rapidement devenir un must-have sur mon poste de dev.
 
