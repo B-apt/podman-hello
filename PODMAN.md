@@ -174,7 +174,7 @@ spec:
 <img alt="kind-logo.png" height="70" src="kind-logo.png"/>
 
 [Kind](https://kind.sigs.k8s.io/) est un outil à la base pensé pour faire du développement Kubernetes. Il est aussi
-utiliser pour exécuter en local un cluster à des fins de tests, d'apprentissage, de découverte ou autre.
+utilisé pour exécuter en local un cluster pour des tests, pour apprendre K8s, pour des démonstrations ou autre...
 Podman met à disposition une extension qui permet d'interragir avec Kind et de gérer la création d'un cluster
 Kubernetes directement sur le pc du développeur.
 
