@@ -13,7 +13,7 @@ pour son fonctionnement (modèle de Docker). Ce mode daemonless permet à des ut
 sans privilège spécifique de gérer, créer et exécuter des images via Podman.
 
 Un concept important dans Podman est celui de POD, qu’il emprunte (en simplifiant) à Kubernetes.
-Un POD peut être constitué d'un ou plusieurs conteneurs en cours d’exécutions (une image
+Un POD peut être constitué d'un ou plusieurs conteneurs en cours d’exécution (une image
 Nginx et un serveur d’application Java par exemple). Ce groupe de conteneurs va partager des
 ressources (espace de stockage, espace réseau, ...) ce qui assure une intégration facilitée.
 
@@ -54,7 +54,7 @@ A partir de là, il va falloir créer une "machine Podman"
 
 ## Premières commandes
 
-Aujourd'hui, le monde des conteneurs s'articulent quasiment exclusivement autour des systèmes Linux.
+Aujourd'hui, le monde des conteneurs s'articule quasiment exclusivement autour des systèmes Linux.
 Les utilisations sur Windows&Mac sont dédiées au développement, à l'apprentissage, aux tests...
 Podman ne fait pas exception et son utilisation sur Windows/Mac passe par un "Podman machine",
 un système Linux embarqué qui va faire office de support pour l'exécution du programme Podman.
@@ -104,7 +104,7 @@ Mastodon:  @Podman_io@fosstodon.org
 Un des points intéressants de Podman est la possibilité de transformer un POD (composé de
 plusieurs conteneurs) en descripteur pour réaliser un déploiement sur une plateforme Kubernetes.
 L'objectif est d'offrir un outil simple pour les développeurs qui découvrent Kubernetes
-et qui ont besoins de faire un déploiement (sur un cluster de dev par exemple).
+et qui ont besoin de faire un déploiement (sur un cluster de dev par exemple).
 
 _Création d'un premier pod :_
 
@@ -117,8 +117,9 @@ POD ID        NAME              STATUS      CREATED        INFRA ID      # OF CO
 d3182e2680e2  hello-podman-pod  Created     5 seconds ago  08c481b27f34  1
 ```
 
-A la création le POD est en statut "Created", il faut le démarrer ensuite. Avant nous allons
-ajouter un autre conteneur dedans :
+A la création le POD est en statut "Created", il contient un conteneur "infra" qui a un rôle uniquement
+technique (permettre au POD d'exister même sans conteneur en cours d'exécution à l'intérieur du POD).
+Nous allons maintenant ajouter un conteneur "métier" à notre POD.
 
 _Ajout d'un conteneur :_
 
