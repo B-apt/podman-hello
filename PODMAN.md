@@ -60,7 +60,7 @@ Podman ne fait pas exception et son utilisation sur Windows/Mac passe par un "Po
 un système Linux embarqué qui va faire office de support pour l'exécution du programme Podman.
 Sur Windows spécifiquement, ce système fonctionne via WSL2.
 
-Pour les premières commandes, on part du principe que WSL2 est installé sur la machine :
+Une fois les installations réalisées (WSL, Podman), on peut commencer à utiliser podman :
 
 ```
 >> C:\Users\Baptiste>podman machine init
